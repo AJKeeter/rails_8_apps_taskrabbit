@@ -3,7 +3,7 @@
     %h1= @task.title
     %p= @task.description
     %p= @task.company
-    %button.btn.btn-default= link_to "Complete Task", @task.url
+    %button.btn.btn-default= link_to "Complete Task", @task.destroy, data: {confirm: "Task completed?"}
 
 #links
   = link_to "Home", root_path, class: "btn btn-sm btn-default"
